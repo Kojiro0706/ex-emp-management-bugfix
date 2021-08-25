@@ -82,7 +82,7 @@ public class AdministratorController {
 		// フォームからドメインにプロパティ値をコピー
 		BeanUtils.copyProperties(form, administrator);
 		administratorService.insert(administrator);
-		return "redirect:/toLogin";
+		return "redirect:/";
 	}
 
 	/////////////////////////////////////////////////////
@@ -92,7 +92,7 @@ public class AdministratorController {
 	 * ログイン画面を出力します.
 	 * @return ログイン画面
 	 */
-	@RequestMapping("/toLogin")
+	@RequestMapping("/")
 	public String toLogin() {
 		return "administrator/login";
 	}
